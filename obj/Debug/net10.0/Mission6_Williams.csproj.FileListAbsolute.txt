@@ -208,3 +208,4 @@
 /Users/reecewilliams/RiderProjects/Mission6_Williams/Mission6_Williams/obj/Debug/net10.0/Mission6_Williams.pdb
 /Users/reecewilliams/RiderProjects/Mission6_Williams/Mission6_Williams/obj/Debug/net10.0/Mission6_Williams.genruntimeconfig.cache
 /Users/reecewilliams/RiderProjects/Mission6_Williams/Mission6_Williams/obj/Debug/net10.0/ref/Mission6_Williams.dll
+/Users/reecewilliams/RiderProjects/Mission6_Williams/Mission6_Williams/obj/Debug/net10.0/Mission6_Williams.sourcelink.json

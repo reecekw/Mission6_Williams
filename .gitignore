@@ -1,0 +1,13 @@
+# Ignore build results
+bin/
+obj/
+
+# Ignore database files
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Ignore user-specific files
+.idea/
+.vs/
+.DS_Store
