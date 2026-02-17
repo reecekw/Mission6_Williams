@@ -10,7 +10,7 @@
             <h2 class="text-center mb-4">Add a Movie to the Collection</h2>
 
             <form method="post">
-                
+                <input type="hidden" asp-for="MovieId" />
                 <div class="mb-3">
                     <label asp-for="CategoryId" class="form-label">Category</label>
                     <select asp-for="CategoryId" class="form-select">

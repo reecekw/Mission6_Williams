@@ -9,7 +9,6 @@ namespace Mission6_Williams.Models
         [Required]
         public int MovieId { get; set; }
 
-        // Foreign Key Relationship
         [Required]
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
@@ -18,22 +17,22 @@ namespace Mission6_Williams.Models
         public string Title { get; set; }
 
         [Required]
-        [Range(1888, int.MaxValue, ErrorMessage = "Year must be 1888 or later.")] // Mission 7 requirement
+        [Range(1888, int.MaxValue, ErrorMessage = "Year must be 1888 or later.")]
         public int Year { get; set; }
 
-        [Required]
-        public string Director { get; set; }
+        // REMOVED [Required] and added '?'
+        public string? Director { get; set; }
+
+        // REMOVED [Required] and added '?'
+        public string? Rating { get; set; }
 
         [Required]
-        public string Rating { get; set; }
-
-        [Required]
-        public bool Edited { get; set; } // Now required for Mission 7
+        public bool Edited { get; set; }
 
         public string? LentTo { get; set; }
 
         [Required]
-        public bool CopiedToPlex { get; set; } // New field for Mission 7
+        public bool CopiedToPlex { get; set; }
 
         [StringLength(25)]
         public string? Notes { get; set; }
