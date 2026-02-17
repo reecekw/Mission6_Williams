@@ -1,0 +1,76 @@
+@model Mission6_Williams.Models.Movie
+
+@{
+    ViewData["Title"] = "Add a Movie";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-4">Add a Movie to the Collection</h2>
+
+            <form method="post">
+                
+                <div class="mb-3">
+                    <label asp-for="CategoryId" class="form-label">Category</label>
+                    <select asp-for="CategoryId" class="form-select">
+                        <option value="">Select a Category</option>
+                        @foreach (var c in ViewBag.Categories)
+                        {
+                            <option value="@c.CategoryId">@c.CategoryName</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">Title</label>
+                    <input asp-for="Title" class="form-control" placeholder="Enter movie title" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Year" class="form-label">Year</label>
+                    <input asp-for="Year" class="form-control" type="number" min="1888" /> 
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Director" class="form-label">Director</label>
+                    <input asp-for="Director" class="form-control" placeholder="Enter director's name" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Rating" class="form-label">Rating</label>
+                    <select asp-for="Rating" class="form-select">
+                        <option value="G">G</option>
+                        <option value="PG">PG</option>
+                        <option value="PG-13">PG-13</option>
+                        <option value="R">R</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input asp-for="Edited" class="form-check-input" type="checkbox" />
+                    <label asp-for="Edited" class="form-check-label">Edited?</label>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LentTo" class="form-label">Lent To (Optional)</label>
+                    <input asp-for="LentTo" class="form-control" placeholder="Who has this movie?" />
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input asp-for="CopiedToPlex" class="form-check-input" type="checkbox" />
+                    <label asp-for="CopiedToPlex" class="form-check-label">Copied to Plex?</label>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Notes" class="form-label">Notes (Optional, max 25 chars)</label>
+                    <textarea asp-for="Notes" class="form-control" maxlength="25"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Add Movie</button>
+                
+                <div asp-validation-summary="All" class="text-danger mt-3"></div>
+            </form>
+        </div>
+    </div>
+</div>

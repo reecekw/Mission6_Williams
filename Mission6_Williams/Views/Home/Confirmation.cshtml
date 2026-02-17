@@ -1,0 +1,14 @@
+@model Mission6_Williams.Models.Movie
+
+@{
+    ViewData["Title"] = "Movie Added";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4 text-success">Success!</h1>
+    <p class="lead">
+        <strong>@Model.Title</strong> has been added to the collection.
+    </p>
+    <a asp-action="EnterMovie" class="btn btn-primary mt-3">Add Another Movie</a>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Return Home</a>
+</div>
